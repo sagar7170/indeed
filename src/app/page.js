@@ -6,7 +6,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
 import { Avatar } from '@mui/material'
-const page = () => {
+function page() {
    const [products, setProducts] = useState([])
    const [filter, setFilter] = useState([])
 
