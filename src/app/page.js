@@ -71,8 +71,8 @@ const page = () => {
                         <Products key={product.id} image={product.image} title={product.title} price={product.price} rating={product.rating.rate} />
                      </div>
                   )) : products.map(product => (
-                     <div className='single'>
-                        <Products key={product.id} image={product.image} title={product.title} price={product.price} rating={product.rating.rate} />
+                     <div key={product.id} className='single'>
+                        <Products  image={product.image} title={product.title} price={product.price} rating={product.rating.rate} />
                      </div>
                   ))
             }
