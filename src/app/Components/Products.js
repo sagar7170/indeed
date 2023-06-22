@@ -3,8 +3,6 @@ import { Avatar } from '@mui/material'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import React from 'react'
 import Rating from '@mui/material/Rating';
-import SendIcon from '@mui/icons-material/Send';
-
 
 function Products({image,title,price,rating}) {
     return (
@@ -25,10 +23,6 @@ function Products({image,title,price,rating}) {
                 <h4>comments</h4>
                 <h4>share</h4>
             </div>
-            {/* <div className='comments'>
-                <input type="text" placeholder=' Add comment'/>
-                <SendIcon style={{color:"white"}}/>
-            </div> */}
         </div>
     )
 }
