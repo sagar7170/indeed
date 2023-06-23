@@ -69,20 +69,20 @@ function Home() {
                <h4>Posts</h4>
             </div>
             <h3>Filter's</h3>
-            <div className='filters'>
+        <div className='filters'>
                <button onClick={filters} name="electronics" >electronics</button>
                <button onClick={filters} name="jewelery">jewelery</button>
                <button onClick={filters} name="men's clothing">men's clothing</button>
                <button onClick={filters} name="women's clothing">women's clothing</button>
             </div>
-         </div>
+        </div>
 
          <div className='home_post'>
 
             {
                (filter.length !== 0) ?
                   filter.map(product => (
-                     <div className='single'>
+                     <div key={product.id} className='single'>
                         <Products key={product.id} image={product.image} title={product.title} price={product.price} rating={product.rating.rate} />
                      </div>
                   )) : products.map(product => (
