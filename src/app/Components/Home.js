@@ -8,7 +8,7 @@ import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
 import { Avatar } from '@mui/material'
 import ReorderIcon from '@mui/icons-material/Reorder';
 
-function page() {
+function Home() {
    const [products, setProducts] = useState([])
    const [filter, setFilter] = useState([])
 
@@ -97,4 +97,4 @@ function page() {
    )
 }
 
-export default page 
+export default Home 
