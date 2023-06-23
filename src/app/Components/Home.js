@@ -39,9 +39,9 @@ function Home() {
    }
 
    const handleInput = (e)=>{
-    setInput(e.target.value)
-   
-    const srch = products.filter(items=>items.title.toLowerCase().includes(e.target.value))
+
+    setInput(e.target.value.toLowerCase())
+    const srch = products.filter(items=>items.title.toLowerCase().includes(input))
     setSearchArray(srch);
    }  
    const filters = (e) => {
@@ -53,7 +53,6 @@ function Home() {
    return (
       <div className='home'>
         
-
          <div onClick={slider} className='home_icon'>
             <ReorderIcon />
          </div>
