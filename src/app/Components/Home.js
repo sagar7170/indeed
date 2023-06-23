@@ -41,7 +41,7 @@ function Home() {
    const handleInput = (e)=>{
     setInput(e.target.value)
    
-    const srch = products.filter(items=>items.title.includes(e.target.value))
+    const srch = products.filter(items=>items.title.toLowerCase().includes(e.target.value))
     setSearchArray(srch);
    }  
    const filters = (e) => {
