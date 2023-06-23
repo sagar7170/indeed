@@ -138,8 +138,9 @@ input {
   .home_icon {
     display: flex;
   }
- 
- 
+ input{
+  width: 85%;
+ }
 }
 
 .comments {
