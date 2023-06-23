@@ -85,15 +85,36 @@ h3{
  position: fixed
 }
 
+.home_icon{
+  display: none;
+  color: white;
+  position: fixed;
+  margin: 10px;
+}
+
+.slider_icon{
+ color: white;
+ display: none;
+}
+
 @media only screen and (max-width: 600px) {
-     .home_icon{
-      display: flex;
+  .slider_icon{
+ color: white;
+ display: flex;
+ margin: 10px;
+}
+     .sidebar{
+      display: none;
      }
      .home_post{
-     margin-left: 55px;
+     margin-left: 50px;
      display: flex;
      }
+     .home_icon{
+      display: flex;
+    }
 }
+
 .comments{
  display: flex;
  align-items: center;
@@ -123,7 +144,6 @@ button{
   margin: auto;
   margin-top: 40vh;
   width: 250px;
-  /* background-color: aliceblue; */
 }
 
 .login_input{
@@ -135,10 +155,13 @@ input{
 }
 
 .btn{
- width: 275px;
- padding: 10px;
+  width: 275px;
+  padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: rgb(243, 177, 13);
-
 }
+
+
+
+

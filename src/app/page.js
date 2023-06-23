@@ -6,10 +6,12 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
 import { Avatar } from '@mui/material'
+import ReorderIcon from '@mui/icons-material/Reorder';
+
 function page() {
    const [products, setProducts] = useState([])
    const [filter, setFilter] = useState([])
-
+   
    useEffect(() => {
       const api = async () => {
          try {
@@ -24,6 +26,15 @@ function page() {
       api()
    }, [products])
 
+
+   const slider = ()=>{
+   
+      document.querySelector('.sidebar').style.display='block';
+   }
+   const slider1 = ()=>{
+      document.querySelector('.sidebar').style.display='none';
+   }
+  
    const post = () => {
       window.location.reload();
    }
@@ -36,13 +47,19 @@ function page() {
 
    return (
       <div className='home'>
+         <div onClick={slider} className='home_icon'>
+            <ReorderIcon />
+         </div>
          <div className='sidebar'>
+            <div onClick={slider1} className='slider_icon'>
+               <ReorderIcon />
+            </div>
             <div className='slider_opt'>
                <Avatar src='https://wellgroomedgentleman.com/media/images/Tony_Stark_Beard_with_Quiff_Hairstyle.width-800.jpg' />
                <h3>Sagar</h3>
             </div>
             <div onClick={post} className='slider_opt'>
-               <HomeIcon  style={{ color: "white" }} />
+               <HomeIcon style={{ color: "white" }} />
                <h4>Home</h4>
             </div>
             <div className='slider_opt'>
@@ -63,7 +80,7 @@ function page() {
          </div>
 
          <div className='home_post'>
-   
+
             {
                (filter.length !== 0) ?
                   filter.map(product => (
@@ -72,7 +89,7 @@ function page() {
                      </div>
                   )) : products.map(product => (
                      <div key={product.id} className='single'>
-                        <Products  image={product.image} title={product.title} price={product.price} rating={product.rating.rate} />
+                        <Products image={product.image} title={product.title} price={product.price} rating={product.rating.rate} />
                      </div>
                   ))
             }
